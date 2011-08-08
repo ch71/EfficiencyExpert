@@ -1,0 +1,24 @@
+main: mathmaniac43.efficiencyexpert.EfficiencyExpert
+name: EfficiencyExpert
+version: 1.0
+
+commands:
+    ee.on:
+        description: This turns EfficiencyExpert on.
+    ee.activate:
+        description: This turns EfficiencyExpert on.
+    ee.off:
+        description: This turns EfficiencyExpert off.
+    ee.deactivate:
+        description: This turns EfficiencyExpert off.
+    ee.efficient:
+        description: This puts EfficiencyExpert into Efficient mode.
+    ee.fast:
+        description: This puts EfficiencyExpert into Fast mode.
+    ee.status:
+        description: This returns EfficiencyExpert's settings to the corresponding user.
+
+permissions:
+    efficiencyexpert.*:
+        description: Gives player access to entirety of EfficiencyExpert plugin.
+        default: op
