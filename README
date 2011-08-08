@@ -1,0 +1,90 @@
+EfficiencyExpert v1.0
+
+
+I simply copied all of this information from the Bukkit thread hosting the plugin. Enjoy!
+-mathmaniac43
+
+
+
+Introduction:
+
+
+
+Through my Minecrafting career, I have built, explored, destroyed, and been lost countless times. But all of those things have one thing in common: they take time. Hours can be spent wandering around, or collecting supplies, or building structures. Introducing a plugin designed to try and make everything just a little bit faster: EfficiencyExpert (EE).
+
+The basis of this plugin struck me as a simple inspiration: it takes a lot of time to shuffle things around in your inventory. So, at first, I made it a plugin that automatically chooses the tools you use, based on the blocks in front of you, with some options attached to it. This is the basis for the plugin, but you can bet that there'll be updates in the future. My goal is to make certain simple tasks vanish for the players.
+
+
+
+Explanation:
+
+
+
+EE automatically changes the tool in the player's hand to fit the appropriate blocks that the player is targeting. The current tools under support are the pickaxe, the shovel, the shears, and the axe. When the plugin is active for a given player, there are two options that can be set: speed or efficiency. This tells the plugin how to look for a specific tool. For example, say there is a block of dirt that you have targeted. When EE senses it, it considers the option. If it's on speed mode, it looks for the fastest available tool, in this order: gold, diamond, iron, stone, wood. If it's on efficiency mode, it looks for the weakest tool available: wood, gold, stone, iron, then diamond. This is of particular importance with pickaxes, as only certain picks can break certain blocks; EE automatically chooses the appropriate tool that will get the job done, based on its mode.
+
+But, what if there ISN'T a tool for the job? What if you're digging, and you run out of shovels; or, you are trying to break a block that doesn't require a tool, like a door? No need to fear: EE automatically tries to protect your tools from inefficient usage, like hitting dirt with a sword. It tries to switch to an empty hand if possible, and if it can't, it tries to switch to a non-tool, so that the tools you DO have aren't used improperly.
+
+There are two features that make this plugin catered to the individual: permissions compatibility, and individualized data files. Permissions are automatically given to all OP's by default for this plugin, but they can also be specified for other players using a Permissions plugin (the permission is below). The individual data files are per-user, allowing each player allowed to use the plugin to set it how they like. There are commands to turn the plugin on or off, and there are commands to go into fast or efficient modes, per each player (also explained below).
+
+
+
+Cold, Hard Content:
+
+
+
+Commands (note - these only work provided the sender has permission)
+  /ee.on OR /ee.activate - Activates the plugin for the sender.
+  /ee.off OR /ee.deactivate - Deactivates the plugin for the sender.
+  /ee.efficient - Sets the plugin into efficient mode for the sender.
+  /ee.fast - Sets the plugin into fast mode for the sender.
+  /ee.status - Returns whether the sender has the plugin active, and whether it's in efficient or fast modes.
+Permission: efficiencyexpert.*
+
+
+
+Changelog:
+
+
+
+[v1.0] - Initial Release
+  Automatic tool selection, with commands
+  Individualized EE data files, per player
+  Permissions support
+
+
+
+Things To Take Note Of:
+
+
+
+  This plugin does NOT provide players with free tools, it simply reorganizes what they have
+  Currently, swords and hoes are not supported by this plugin. The only supported tools (made of all materials) are the pickaxe, the shovel, the shears, and the axe
+  This plugin may not fare well when used in conjunction with other inventory-changing plugins
+  When targeting a block with a tool, EE checks against a pre-established collection of blocks to determine the appropriate tool for use. If a particular block is either unsupported, or supported incorrectly, please let me know the following:
+  What block is unsupported
+  The minimum-grade tool capable of breaking the block AND producing loot (an item that you can pick up)
+
+
+
+Future Additions (Hopefully):
+
+
+
+  Support for swords as tools (if facing a mob or other living entity, draw a sword)
+  Automatic regulation of item stacks in inventory (such as keeping those held in the hotkey bar filled up as high as possible, automatically condensing the same items into fewer stacks, etc.)
+  @wassilij suggested that I make a config file to allow the server owner to set the default settings for EE; instead of being defaulted to "off" and "efficient", it can be customized, per-server. I intend to do so
+  @Tahg suggested that I make certain tools show up when facing certain entities, like a bucket for a cow, shears for a sheep, and flint and steel for a pig. I intend to do so, as an extra, optional setting
+  @Copperecho suggested that I make an option to automatically check for buckets when looking at liquids. I intend to do so
+  Automatically try to draw a Minecart when targeting Minecart tracks
+  Addition of comments in the source, but only if requested. I tend to write self-documenting code, so anyone who DOES want to look at it SHOULD already understand it
+  @SlamBlasta suggested a configurable option to have a single set hotkey bar slot (i.e. the items you can switch to by hitting 1 - 9) that EE would interact with, instead of the whole hotbar, which I very much like (see @SlamBlasta's reply for a better explanation =D)
+  The_Guest suggested that I add a configurable option for use of gold tools (i.e., make it ignore gold tools), the main reason being that gold tools are sometimes used as parts of other plugins. My reasoning is that I don't like to use gold tools for mining, but feel amazing when I have them, so I think I'll add this feature
+
+
+
+Special Thanks:
+
+
+
+  Thanks most of all to my friend Tahkeh, who intermittently helped me learn how to code plugins, do small bits of coding, and debug this entire plugin, all within 4 days (check out his plugin, LoginMessage)
+  Thanks also to my other friend pop2012, who helped me debug for about 10 minutes once
